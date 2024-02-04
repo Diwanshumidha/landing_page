@@ -1,0 +1,15 @@
+max_width=1600px
+
+font_size = 24px , 110px, 28px, 44px, 20px 
+
+
+font_weight = Bold, Regular, Medium
+
+colors = #475C46 
+         #0D4512 
+         #085C11 
+         #0D4512
+         #141E15
+         #26582A
+
+

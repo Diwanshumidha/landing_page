@@ -3,31 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --clr-primary-900: 117 14% 32%;
+  --clr-primary-700: 125 68% 16%;
+  --clr-primary-600: 126 84% 20%;
+  --clr-primary-500: 125 40% 25%;
+  --clr-primary-400: 126 20% 10%;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+  --clr-white: 0 0% 100%;
+  --clr-black: 0 0% 0%;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  --base-font-size: 16px;
+  --fs-small: 1.25rem; /* 20px / 16px = 1.25rem */
+  --fs-medium: 1.5rem; /* 24px / 16px = 1.5rem */
+  --fs-large: 1.75rem; /* 28px / 16px = 1.75rem */
+  --fs-xl: 2.75rem; /* 44px / 16px = 2.75rem */
+  --fs-xxl: 6.875rem; /* 110px / 16px = 6.875rem */
+
+  --fw-bold: bold;
+  --fw-regular: normal;
+  --fw-medium: 500;
+
+  --max-width: 1600px;
+  --container-padding: 0.8125rem; /* 13px / 16px = 0.8125rem */
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .wrapper {
+    width: min(
+      100%,
+      calc(var(--max-width, 1600px) - var(--container-padding) * 2)
+    );
+    margin-inline: auto;
   }
 }
